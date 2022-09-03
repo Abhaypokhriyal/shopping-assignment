@@ -1,0 +1,45 @@
+
+<h1>Cosmetics / Household</h1>
+
+
+
+ <!--Table-->
+<table class="table table-striped w-auto">
+
+    <!--Table head-->
+    <thead>
+      <tr>
+      
+        <th>Products</th>
+        <th>Product ID</th>
+        <th>Section</th>
+        <th>Price</th>
+        <th>Add / Remove  from cart</th>
+      </tr>
+    </thead>
+    <!--Table head-->
+  
+    <!--Table body-->
+
+   
+    <tbody>
+      <tr class="table-info" *ngFor= "let emp of employees">
+      
+        <td>{{emp.employeeName}}</td>
+        <td>{{emp.employeeMobileNo}}</td>
+        <td>{{emp.employeeEmail}}</td>
+        <td>{{emp.employeeSalary}}</td>
+        <td>
+            
+             <button (click)="removeEmployee(emp.employeeId)" class="btn btn-danger" style="margin-left:15px">remove from cart</button>
+              <button (click)="updateEmployee(emp.employeeId)" class="btn btn-info" style="margin-left:15px">Add to cart</button>
+        </td>
+      </tr>
+      
+    </tbody>
+    <!--Table body-->
+  
+  
+  </table>
+  <!--Table-->
+
